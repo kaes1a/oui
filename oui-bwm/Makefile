@@ -27,6 +27,8 @@ endef
 
 MAKE_OPTS:= \
 	$(KERNEL_MAKE_FLAGS) \
+	ARCH="$(ARCH)" \
+	CROSS_COMPILE=$(TARGET_CROSS) \
 	M="$(PKG_BUILD_DIR)"
 
 define Build/Compile
